@@ -7,6 +7,7 @@ TagManager:
   - FallDetector
   - Player2
   - Checkpoint
+  - turn
   layers:
   - Default
   - TransparentFX
