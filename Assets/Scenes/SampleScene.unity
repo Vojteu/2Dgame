@@ -1090,8 +1090,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81386676c87a5745bcec40d06bb0625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  MoveRigt: 0
+  speed: 2
+  MoveRight: 0
+  groundCheckRadius: 0.5
+  groundCheckPoint: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &692581826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2051,7 +2056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.data[1].x
@@ -2063,18 +2068,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.data[2].x
-      value: 0.1272374
+      value: 0.12670903
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.data[2].y
-      value: 0.076350965
+      value: 0.07543548
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.data[3].x
-      value: 0.15006334
+      value: 0.12782225
       objectReference: {fileID: 0}
     - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
       propertyPath: m_Points.Array.data[3].y
+      value: 0.07548125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
+      propertyPath: m_Points.Array.data[4].x
+      value: 0.15006334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404438646780020005, guid: c9873916d32362a4c8816d623cd193c3, type: 3}
+      propertyPath: m_Points.Array.data[4].y
       value: 0.074999966
       objectReference: {fileID: 0}
     m_RemovedComponents: []

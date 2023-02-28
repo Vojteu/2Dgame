@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour{
     public Vector3 respawnPoint;
     public LevelManager gameLevelManager;
 
-    //Start is called before the first frame update
     void Start(){
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.freezeRotation = true;
@@ -23,8 +22,7 @@ public class PlayerController : MonoBehaviour{
         respawnPoint = transform.position;
         gameLevelManager = FindObjectOfType<LevelManager>();
     }
-
-    // Update is called once per frame
+    
     void Update(){
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
         movement = Input.GetAxis ("Horizontal");
@@ -50,8 +48,6 @@ public class PlayerController : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "FallDetector") {
-            // what will happen when player enters the FallDetector zone
-            //transform.position = respawnPoint;
             gameLevelManager.Respawn();
         }
         if (other.tag == "Checkpoint") {

@@ -4,23 +4,19 @@ using UnityEngine;
 
 public class PolicemanController : MonoBehaviour
 {
-    //public float speed = 5f;
-    //private float movement = 5f;
-    //private Animator policemanAnimator;
-    //private bool isTouchingGround;
-    //private Rigidbody2D rigidBody;
-
-    //public Transform groundCheckPoint;
-    //public float groundCheckRadius;
-    //public LayerMask groundLayer;
-    // Start is called before the first frame update
-
-
     public float speed;
     public bool MoveRight;
-   
+    public float groundCheckRadius;
+    public Transform groundCheckPoint;
+    public LayerMask groundLayer;
+    private bool isTouchingGround;
+    private Rigidbody2D rigidBody;
 
-    // Update is called once per frame
+    void Start() {
+        rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody.freezeRotation = true;
+    }
+
     void Update()
     {
         if (MoveRight) {
@@ -30,7 +26,6 @@ public class PolicemanController : MonoBehaviour
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
             transform.localScale = new Vector2(-5, 4);
         }
-       
     }
 
     void OnTriggerEnter2D(Collider2D trig) {
