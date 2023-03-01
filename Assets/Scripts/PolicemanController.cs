@@ -6,10 +6,6 @@ public class PolicemanController : MonoBehaviour
 {
     public float speed;
     public bool MoveRight;
-    public float groundCheckRadius;
-    public Transform groundCheckPoint;
-    public LayerMask groundLayer;
-    private bool isTouchingGround;
     private Rigidbody2D rigidBody;
 
     void Start() {

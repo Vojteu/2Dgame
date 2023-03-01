@@ -6,14 +6,14 @@ public class SpellCast : MonoBehaviour {
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    void Start(){
-        
+    void Start() {
+
     }
 
-    void Update(){
+    void Update() {
         if (Input.GetButtonDown("Fire1")) {
             Shoot();
-        }    
+        }
     }
 
     void Shoot() {
