@@ -7,9 +7,20 @@ public class Bullet : MonoBehaviour{
     public float speed = 20f;
     public Rigidbody2D rb;
     public int damage = 40;
+    public PlayerController gamePlayer;
 
     void Start(){
-        rb.velocity = transform.right * speed;
+        gamePlayer = FindObjectOfType<PlayerController>();
+
+        if(gamePlayer.transform.localScale.x > 0f) {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            transform.localScale = new Vector2(3f, 3f);
+        } else if(gamePlayer.transform.localScale.x < 0f) {
+            rb.velocity = new Vector2((-1)*speed, rb.velocity.y);
+            transform.localScale = new Vector2(-3f, 3f);
+        } else {
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
@@ -18,10 +29,8 @@ public class Bullet : MonoBehaviour{
         if(enemy != null) {
             enemy.TakeDamage(damage);
         }
-
         if(hitInfo.name == "Police_minion") {
             Destroy(gameObject);
         }
-        
     }
 }
