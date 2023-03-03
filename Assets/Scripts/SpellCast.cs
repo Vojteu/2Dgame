@@ -8,11 +8,11 @@ public class SpellCast : MonoBehaviour {
     private PlayerController playerMovement;
 
     void Start() {
-
+        playerMovement = GetComponent<PlayerController>();
     }
 
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && playerMovement.canAttack()) {
             Shoot();
         }
     }
