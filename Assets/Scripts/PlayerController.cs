@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour{
     private Animator playerAnimation;
     public Vector3 respawnPoint;
     public LevelManager gameLevelManager;
-    //private float horizontalInput;
 
     void Start(){
         rigidBody = GetComponent<Rigidbody2D>();
