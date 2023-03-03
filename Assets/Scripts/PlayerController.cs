@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour{
     private Animator playerAnimation;
     public Vector3 respawnPoint;
     public LevelManager gameLevelManager;
+    //private float horizontalInput;
 
     void Start(){
         rigidBody = GetComponent<Rigidbody2D>();
@@ -52,5 +53,9 @@ public class PlayerController : MonoBehaviour{
         if (other.tag == "Checkpoint") {
             respawnPoint = other.transform.position;
         }
+    }
+
+    public bool canAttack() {
+        return movement == 0 && isTouchingGround;
     }
 }

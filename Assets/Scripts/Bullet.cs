@@ -8,8 +8,11 @@ public class Bullet : MonoBehaviour{
     public Rigidbody2D rb;
     public int damage = 40;
     public PlayerController gamePlayer;
+    public float liveTime = 2;  
 
     void Start(){
+        
+
         gamePlayer = FindObjectOfType<PlayerController>();
 
         if(gamePlayer.transform.localScale.x > 0f) {
@@ -22,9 +25,14 @@ public class Bullet : MonoBehaviour{
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
     }
+    void Update() {
+        liveTime -= Time.deltaTime;
+        if (liveTime <= 0f) {
+            Destroy(gameObject);
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        //Debug.Log(hitInfo.name);
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         if(enemy != null) {
             enemy.TakeDamage(damage);

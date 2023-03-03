@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpellCast : MonoBehaviour {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    private PlayerController playerMovement;
 
     void Start() {
 

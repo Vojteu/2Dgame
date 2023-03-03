@@ -159,6 +159,8 @@ MonoBehaviour:
   speed: 10
   rb: {fileID: 2068150224782529756}
   damage: 40
+  gamePlayer: {fileID: 0}
+  liveTime: 2
 --- !u!95 &-4699169054917005611
 Animator:
   serializedVersion: 4
