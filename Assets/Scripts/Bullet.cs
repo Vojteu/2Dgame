@@ -40,5 +40,8 @@ public class Bullet : MonoBehaviour{
         if(hitInfo.name == "Police_minion") {
             Destroy(gameObject);
         }
+        if (hitInfo.tag == "ShotWall") {
+            Destroy(gameObject);
+        }
     }
 }
