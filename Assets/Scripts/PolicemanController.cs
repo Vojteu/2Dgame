@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PolicemanController : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1.5f;
     public bool MoveRight;
     private Rigidbody2D rigidBody;
 
