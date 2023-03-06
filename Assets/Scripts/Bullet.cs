@@ -11,8 +11,6 @@ public class Bullet : MonoBehaviour{
     public float liveTime = 2;  
 
     void Start(){
-        
-
         gamePlayer = FindObjectOfType<PlayerController>();
 
         if(gamePlayer.transform.localScale.x > 0f) {

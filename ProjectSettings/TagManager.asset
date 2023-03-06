@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - turn
   - ShotWall
+  - Police_minion
   layers:
   - Default
   - TransparentFX
