@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour{
     void Update(){
         isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
         movement = Input.GetAxis ("Horizontal");
+
         if (movement > 0f) {
             rigidBody.velocity = new Vector2(movement * speed, rigidBody.velocity.y);
             transform.localScale = new Vector2(5.2529f, 3.850944f);
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour{
         if (other.tag == "Checkpoint") {
             respawnPoint = other.transform.position;
         }
-        if(other.tag == "Police_minion") {
+        if (other.tag == "Busted") {
             gameLevelManager.Respawn();
         }
     }

@@ -10,6 +10,7 @@ TagManager:
   - turn
   - ShotWall
   - Police_minion
+  - Busted
   layers:
   - Default
   - TransparentFX
