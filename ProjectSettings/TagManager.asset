@@ -12,6 +12,7 @@ TagManager:
   - Police_minion
   - Busted
   - FlyingCar
+  - TheEnd
   layers:
   - Default
   - TransparentFX

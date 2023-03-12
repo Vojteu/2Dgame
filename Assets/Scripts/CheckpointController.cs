@@ -22,8 +22,12 @@ public class CheckpointController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player2") {
+            Application.Quit();
             checkpointSpriteRenderer.sprite = greenFlag;
             checkpointReached = true;
         }
+        //if (other.tag == "TheEnd") {
+        //    Application.Quit();
+        //}
     }
 }

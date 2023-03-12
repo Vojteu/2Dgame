@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour{
         if (other.tag == "Busted") {
             gameLevelManager.Respawn();
         }
-    }
+       }
 
     public bool canAttack() {
         return movement == 0 && isTouchingGround;
