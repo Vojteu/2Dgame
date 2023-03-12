@@ -44,6 +44,10 @@ public class PlayerController : MonoBehaviour{
         }
         playerAnimation.SetFloat("Speed", Mathf.Abs(rigidBody.velocity.x));
         playerAnimation.SetBool("OnGround", isTouchingGround);
+
+        if (Input.GetButtonDown("Cancel")) {
+            Application.Quit();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -56,7 +60,10 @@ public class PlayerController : MonoBehaviour{
         if (other.tag == "Busted") {
             gameLevelManager.Respawn();
         }
-       }
+        if (other.tag == "TheEnd") {
+            Application.Quit();
+        }
+    }
 
     public bool canAttack() {
         return movement == 0 && isTouchingGround;
