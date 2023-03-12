@@ -7,6 +7,7 @@ public class PlatformMove : MonoBehaviour
     public float speed = 1.5f;
     public bool MoveRight;
     private Rigidbody2D rigidBody;
+    //public bool MoveUp;
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();

@@ -8,13 +8,11 @@ public class CheckpointController : MonoBehaviour
     public Sprite greenFlag;
     private SpriteRenderer checkpointSpriteRenderer;
     public bool checkpointReached;
-    // Start is called before the first frame update
     void Start()
     {
         checkpointSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
