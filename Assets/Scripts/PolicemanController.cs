@@ -17,10 +17,10 @@ public class PolicemanController : MonoBehaviour
     {
         if (MoveRight) {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(5, 4);
+            transform.localScale = new Vector2(7, 4);
         } else {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(-5, 4);
+            transform.localScale = new Vector2(-7, 4);
         }
     }
 

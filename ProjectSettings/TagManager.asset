@@ -11,6 +11,7 @@ TagManager:
   - ShotWall
   - Police_minion
   - Busted
+  - FlyingCar
   layers:
   - Default
   - TransparentFX
@@ -45,15 +46,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: middle
-    uniqueID: 3708581283
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Idle1
-    uniqueID: 2037166969
+  - name: Skyground
+    uniqueID: 3708581283
+    locked: 0
+  - name: Background
+    uniqueID: 2447724509
+    locked: 0
+  - name: Midground
+    uniqueID: 3523636093
     locked: 0
   - name: Foreground
-    uniqueID: 2447724509
+    uniqueID: 2037166969
     locked: 0
