@@ -7,7 +7,6 @@ public class PlatformMove : MonoBehaviour
     public float speed = 1.5f;
     public bool MoveRight;
     private Rigidbody2D rigidBody;
-    //public bool MoveUp;
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -15,12 +14,19 @@ public class PlatformMove : MonoBehaviour
     }
 
     void Update() {
-        if (MoveRight) {
+        if (CompareTag("PlatformHorizontal") || CompareTag("FallDetector")) {
+        
+            if (MoveRight) {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(5, 3);
-        } else {
-            transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(-5, 3);
+            } else {
+            transform.Translate(2 * Time.deltaTime * speed, 0,0);
+            }
+         } else {
+            if (MoveRight) {
+                transform.Translate(0, -1 * Time.deltaTime * speed, 0);
+            } else {
+                transform.Translate(0, 1 * Time.deltaTime * speed, 0);
+            }
         }
     }
 
@@ -28,14 +34,20 @@ public class PlatformMove : MonoBehaviour
         if (trig.gameObject.CompareTag("turn")) {
             if (MoveRight) {
                 MoveRight = false;
-            } else {
+            } else{
                 MoveRight = true;
             }
         }
-    }
-    //private void OnCollisionEnter2D (Collision2D collision) {
-    //    if (collision.gameObject.CompareTag("Player2")) {
-    //        collision.collider.transform.SetParent(transform);
+       }
+
+    //private void OnCollisionEnter2D(Collision2D collision) {
+    //    if (collision.gameObject.name == "player1") {
+    //        collision.gameObject.transform.SetParent(transform);
+    //    }
+    //}
+    //private void OnCollisionExit2D(Collision2D collision) {
+    //    if (collision.gameObject.name == "player1") {
+    //        collision.gameObject.transform.SetParent(null);
     //    }
     //}
 }

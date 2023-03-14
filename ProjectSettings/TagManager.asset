@@ -13,7 +13,10 @@ TagManager:
   - Busted
   - FlyingCar
   - TheEnd
-  - Platform
+  - ScorePoint
+  - PlatformVertical
+  - PlatformHorizontal
+  - GroundCheck
   layers:
   - Default
   - TransparentFX

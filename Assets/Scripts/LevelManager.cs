@@ -32,4 +32,7 @@ public class LevelManager : MonoBehaviour
     public void AddCoins(int numberOfCoins) {
         coins += numberOfCoins;
     }
+    public int getCoinValue() {
+        return coins;
+    }
 }
