@@ -17,9 +17,11 @@ public class PlatformMove : MonoBehaviour
         if (CompareTag("PlatformHorizontal") || CompareTag("FallDetector")) {
         
             if (MoveRight) {
-            transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+                transform.localScale = new Vector2(5, 3);
+                transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             } else {
-            transform.Translate(2 * Time.deltaTime * speed, 0,0);
+                transform.localScale = new Vector2(-5, 3);
+                transform.Translate(2 * Time.deltaTime * speed, 0,0);
             }
          } else {
             if (MoveRight) {
@@ -39,15 +41,4 @@ public class PlatformMove : MonoBehaviour
             }
         }
        }
-
-    //private void OnCollisionEnter2D(Collision2D collision) {
-    //    if (collision.gameObject.name == "player1") {
-    //        collision.gameObject.transform.SetParent(transform);
-    //    }
-    //}
-    //private void OnCollisionExit2D(Collision2D collision) {
-    //    if (collision.gameObject.name == "player1") {
-    //        collision.gameObject.transform.SetParent(null);
-    //    }
-    //}
 }

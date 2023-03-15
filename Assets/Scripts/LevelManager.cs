@@ -13,11 +13,6 @@ public class LevelManager : MonoBehaviour
         gamePlayer = FindObjectOfType<PlayerController>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Respawn() {
         StartCoroutine("RespawnCoroutine");
     }

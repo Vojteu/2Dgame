@@ -9,10 +9,6 @@ public class PlayerAttack : MonoBehaviour{
     private PlayerController playerMovement;
     private float cooldownTimer = Mathf.Infinity;
 
-    void Start(){
-        
-    }
-
     void Update(){
         if (Input.GetButtonDown("Fire1") && cooldownTimer > attackCooldown && playerMovement.canAttack()) {
             Attack();
