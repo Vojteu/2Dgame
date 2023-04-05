@@ -6,6 +6,7 @@ public class SpellCast : MonoBehaviour {
     public Transform firePoint;
     public GameObject bulletPrefab;
     private PlayerController playerMovement;
+    
 
     void Start() {
         playerMovement = GetComponent<PlayerController>();
@@ -18,6 +19,7 @@ public class SpellCast : MonoBehaviour {
     }
 
     void Shoot() {
+        playerMovement.audioSource.PlayOneShot(playerMovement.shootingAudioClip);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

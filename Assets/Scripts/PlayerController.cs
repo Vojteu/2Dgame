@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour{
     private Animator playerAnimation;
     public Vector3 respawnPoint;
     public LevelManager gameLevelManager;
+    public AudioSource audioSource;
+    public AudioClip shootingAudioClip;
 
     void Start(){
         rigidBody = GetComponent<Rigidbody2D>();
